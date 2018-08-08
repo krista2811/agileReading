@@ -2,6 +2,7 @@
   <dictionary name="ciy40">
     <words>
       <w>endblock</w>
+      <w>endcomment</w>
       <w>endfor</w>
     </words>
   </dictionary>

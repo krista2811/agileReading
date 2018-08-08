@@ -119,7 +119,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
-
+STATICFILES_DIRS = (  # Need to modify later to STATIC_ROOT for deployment
+    os.path.join(BASE_DIR, 'static'),
+)
 
 # Redirect to home URL after login (Default redirects to /accounts/profile/)
 # 'sfsd/' -> 상대 주소
