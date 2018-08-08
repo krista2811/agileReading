@@ -124,4 +124,4 @@ STATIC_URL = '/static/'
 # Redirect to home URL after login (Default redirects to /accounts/profile/)
 # 'sfsd/' -> 상대 주소
 # '/sfsd/' -> 절대 주소
-LOGIN_REDIRECT_URL = '/blog/'
+# LOGIN_REDIRECT_URL = '/blog/'
