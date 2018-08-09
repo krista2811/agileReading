@@ -123,6 +123,8 @@ STATICFILES_DIRS = (  # Need to modify later to STATIC_ROOT for deployment
     os.path.join(BASE_DIR, 'static'),
 )
 
+AUTH_USER_MODEL = 'blog.User'
+
 # Redirect to home URL after login (Default redirects to /accounts/profile/)
 # 'sfsd/' -> 상대 주소
 # '/sfsd/' -> 절대 주소

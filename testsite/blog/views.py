@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
+from django.contrib import messages
 from django.http import HttpResponse, Http404
 from .forms import SignUpForm
+import hashlib
 
 # Create your views here.
 
@@ -17,7 +19,11 @@ def signup(request):
     if request.method == 'POST':
         form = SignUpForm(request.POST)
         if form.is_valid():
-            form.save()
+            new_user = form.save(commit=False)
+            uid = hashlib.md5((new_user.username + new_user.email).encode()).hexdigest()
+            new_user.uid = uid
+            new_user.save()
+            messages.success(request, 'Your account is created successfully!')
             return redirect('login')
     else:
         form = SignUpForm()
