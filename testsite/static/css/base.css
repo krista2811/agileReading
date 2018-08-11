@@ -50,6 +50,11 @@ body :-ms-input-placeholder {
   -webkit-transform: translateY(85px);
           transform: translateY(85px);
 }
+.sidebar-nav {
+    margin-top: 20px;
+    padding: 0;
+    list-style: none;
+}
 .container {
   max-width: 600px;
   margin: 0 auto;

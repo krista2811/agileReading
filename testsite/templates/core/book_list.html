@@ -1,0 +1,14 @@
+{% extends "base_generic.html" %}
+
+{% block title %}Book List{% endblock %}
+{% block head %}Book List{% endblock %}
+{% block content %}
+
+    <form method="post">{% csrf_token %}
+        <ul>
+        {% for book in books %}
+            <li><a href="{% url 'blog:report_list' book.slug %}">{{ book.title }}</a></li>
+        {% endfor %}
+        </ul>
+    </form>
+{% endblock %}

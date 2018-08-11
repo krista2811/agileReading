@@ -1,6 +1,6 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
-from blog.models import User
+from blog.models import *
 
 
 class SignUpForm(UserCreationForm):
@@ -11,3 +11,15 @@ class SignUpForm(UserCreationForm):
     class Meta:
         model = User
         fields = ('username', 'first_name', 'last_name', 'email', 'password1', 'password2',)
+
+
+class ReportForm(forms.ModelForm):
+    class Meta:
+        model = Report
+        fields = ('title', 'contents', )
+
+
+class BookAssignForm(forms.ModelForm):
+    class Meta:
+        model = Book
+        fields = ('title', 'description', )

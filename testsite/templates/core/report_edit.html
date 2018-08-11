@@ -1,0 +1,16 @@
+{% extends "base_generic.html" %}
+
+{% block title %}Add a book report{% endblock %}
+{% block head %}Add a book report{% endblock %}
+{% block content %}
+
+    <form method="post">{% csrf_token %}
+        {% for field in form %}
+            <p>
+                {{ field.help_text }}<br>
+                {{ field }}
+            </p>
+        {% endfor %}
+        <button type="submit">Submit</button>
+    </form>
+{% endblock %}

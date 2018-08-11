@@ -1,9 +1,9 @@
 {% extends "base_generic.html" %}
 
-{% block title %}Log out{% endblock %}
-{% block head %}Log out{% endblock %} <!-- (거의) 모든 화면의 상단에 log out 버튼을 만들자 -->
+{% block title %}Log Out Successful{% endblock %}
+{% block head %}You've Logged Out of Agile Reading{% endblock %} <!-- (거의) 모든 화면의 상단에 log out 버튼을 만들자 -->
 {% block content %}
     <form class="form" method="post" action="." >{% csrf_token %}
-        <button type="button" onclick="window.location.href='{% url 'login' %}'">Log out</button>
+        <button type="button" onclick="window.location.href='{% url 'login' %}'">Go back to Log in page</button>
     </form>
 {% endblock %}
